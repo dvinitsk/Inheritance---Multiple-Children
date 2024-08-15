@@ -31,7 +31,8 @@ class Wizard(Hero):
         self.__mana = mana
 
     def cast(self, target):
-        if self.__mana <= 0:
+        print(self.__mana)
+        if self.__mana < 25:
             raise Exception("not enough mana")
         self.__mana -= 25
         target.take_damage(25)
